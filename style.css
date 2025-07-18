@@ -1,5 +1,5 @@
 :root {
-    --white: #f4f4f4;
+    --white: #F9FBFC;
     --p1: #063C6B;
     --p2: #04549D;
     --p3: #0B928E;
@@ -17,6 +17,7 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     scroll-behavior: smooth;
+    background-color: var(--white);
 }
 
 /* Navbar */
@@ -27,7 +28,7 @@ nav {
     width: 100%;
     background-color: var(--white);
     color: black;
-    padding: 1em 2em;
+    padding: 1em 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,6 +38,7 @@ nav {
 
 nav .logo {
     font-weight: bold;
+    font-size: 32px;
 }
 
 nav ul {
@@ -100,8 +102,7 @@ nav ul li a:hover {
     background-color: var(--p2);
 }
 
-/* Sections */
-
+/* Hero */
 .hero-container{
     display: flex;
     flex-direction: row;
@@ -135,7 +136,7 @@ nav ul li a:hover {
     border-color: var(--p3);
     border-width: 1px;
     border-radius: 4px;
-    color: #f4f4f4;
+    color: var(--white);
     transition: background-color 0.3s;
     box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.1);
     cursor: pointer;
@@ -144,7 +145,7 @@ nav ul li a:hover {
     display: flex;
     align-items: center;  
     gap: 10px;
-    background-color: #f4f4f4;
+    background-color: var(--white);
     padding: 12px 22px;
     border: solid;
     border-color: var(--p3);
@@ -201,12 +202,13 @@ nav ul li a:hover {
     font-size: 16px;
 }
 #hero {
-    background-color: #f4f4f4;
+    background-color: var(--white);
     padding-top: 100px;
     text-align: center;
 }
 .hero-p1{
     font-size: 56px;
+    line-height: 70px;
 }
 .hero-p2{
     font-size: 56px;
@@ -214,13 +216,56 @@ nav ul li a:hover {
 }
 
 
+/* Clients */
 #clients {
-    background-color: #eaeaea;
+    background-color: var(--white);
     text-align: center;
 }
+.clients-container{
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+.clients-title{
+    font-size: 40px;
+}
+.infinite-scroll {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    /* optional styling */
+    padding: 10px 0;
+}
 
+/* 2. Flex row containing all images */
+.scroll-content {
+    display: flex;
+    align-items: center;
+    /* no wrap so clones line up */
+    flex-wrap: nowrap;
+    /* smooth scrolling by JS */
+    will-change: transform;
+}
+
+/* 3. Image styling */
+.scroll-content img {
+    max-width: 200px;
+    max-height: 100px;  /* adjust as needed */
+    margin-right: 20px;  /* spacing */
+    flex-shrink: 0;
+}
+
+/* Trusted brands */
+.trusted-brands-container{
+    display: flex;
+    height: 551px;
+    background-image: url(images/backgrounds/trusted1a.png);
+    background-position: center;
+    align-items: center;
+}
+/* Contact */
 #contact {
-    background-color: #ddd;
+    background-color: var(--white);
     text-align: center;
 }
 
@@ -237,7 +282,7 @@ input[type="email"] {
 input[type="submit"] {
     padding: 0.5em 1em;
     background-color: #333;
-    color: white;
+    color: var(--white);
     border: none;
     cursor: pointer;
 }
