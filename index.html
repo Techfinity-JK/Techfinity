@@ -10,7 +10,7 @@
 <body>
 
   <nav>
-    <div class="logo">Techfinity</div>
+    <div class="logo"><img src="images/logos/TechfinityLogo.png" alt=""></div>
     <ul class="li-list">
       <li><a href="#hero">Home</a></li>
       <li><a href="#clients">About</a></li>
@@ -30,12 +30,12 @@
             <p class="hero-p2">Biometrics</p>
         </div>
         <div class="hero-button-container">
-            <div class="hero-product-list-button">
+  <div class="hero-product-list-button">
                 <p>Product List</p>
                 <svg width="20" height="18" viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7 5C7 6.65685 8.34315 8 10 8C11.6569 8 13 6.65685 13 5M1 13.8002V4.2002C1 3.08009 1 2.51962 1.21799 2.0918C1.40973 1.71547 1.71547 1.40973 2.0918 1.21799C2.51962 1 3.08009 1 4.2002 1H15.8002C16.9203 1 17.4796 1 17.9074 1.21799C18.2837 1.40973 18.5905 1.71547 18.7822 2.0918C19 2.5192 19 3.07899 19 4.19691V13.8036C19 14.9215 19 15.4805 18.7822 15.9079C18.5905 16.2842 18.2837 16.5905 17.9074 16.7822C17.48 17 16.921 17 15.8031 17H4.19691C3.07899 17 2.5192 17 2.0918 16.7822C1.71547 16.5905 1.40973 16.2842 1.21799 15.9079C1 15.4801 1 14.9203 1 13.8002Z" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-            </div>
+            </div>          
             <div class="hero-contact-sales-button">
                 <p>Contact Sales</p>
                 <svg width="20" height="16" viewBox="0 0 20 16" xmlns="http://www.w3.org/2000/svg">
@@ -48,6 +48,10 @@
         <img src="images/backgrounds/hero1a.png" alt="">
         <div class="overlay-hero"></div>
     </div>
+  </section>
+
+  <section class="benefits-container">
+
   </section>
 
   <section class="clients-container" id="clients">
@@ -72,18 +76,104 @@
 
   <section class="trusted-brands-container">
     <div class="trusted-brands">
-      
+      <div class="trusted-brands-card">
+        <p class="trusted-brands-card-p">Products we offer from <b>trusted</b> brands</p>
+        <div class="trusted-brands-pngs">
+          <img src="images/brands/zkteco.png" alt="">
+          <img src="images/brands/granding.png" alt="">
+          <img src="images/brands/dahua.png" alt="">
+          <img src="images/brands/hik.png" alt="">
+        </div>
+        <div class="brands-details">
+          <p class="brands-p"><b>Biometric</b> devices for logs, time keeping and door access </p>
+          <p class="brands-p"><b>Surveillance cameras</b> for visual indoor and outdoor security</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Stay in Touch</h2>
-    <p>Subscribe to our newsletter</p>
-    <form>
-      <input type="email" placeholder="Enter your email" required />
-      <input type="submit" value="Subscribe" />
-    </form>
+  <section class="contacts-container">
+    <div class="contacts-card">
+      <div class="contacts-card-title">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.99951 22.3525L6.90446 20.8285L6.91847 20.8177C7.31561 20.5 7.51601 20.3397 7.7396 20.2255C7.9402 20.123 8.1541 20.0484 8.37476 20.0031C8.62347 19.952 8.88254 19.952 9.40259 19.952H20.2539C21.6513 19.952 22.3508 19.952 22.885 19.6798C23.3554 19.4401 23.7381 19.0573 23.9778 18.5869C24.25 18.0526 24.25 17.3539 24.25 15.9565V6.44816C24.25 5.05077 24.25 4.35103 23.9778 3.81677C23.7381 3.34637 23.3546 2.96419 22.8842 2.72451C22.3495 2.45203 21.6504 2.45203 20.2502 2.45203H5.75024C4.35011 2.45203 3.64953 2.45203 3.11475 2.72451C2.64434 2.96419 2.26217 3.34637 2.02248 3.81677C1.75 4.35155 1.75 5.05214 1.75 6.45227V20.791C1.75 22.1231 1.75 22.7891 2.02307 23.1312C2.26056 23.4287 2.62054 23.6018 3.00122 23.6014C3.43894 23.6009 3.9593 23.1846 4.99951 22.3525Z" stroke="#0B928E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        <p class="contacts-card-p">Get in touch with&nbsp;<b>Techfinity</b>&nbsp;today!</p>
+      </div>
+      <form>
+        <label for="name">Full Name</label>
+        <input type="name" placeholder="" required />
+        <label for="phone">Phone Number</label>
+        <input type="phone" placeholder="" required />
+        <label for="email">Email Address</label>
+        <input type="email" placeholder="" required />
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="8" cols="50" placeholder=""></textarea>
+        <div class="contact-submit">
+          <p>Submit</p>
+          <svg width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 12.95L10.2426 17.1926L18.727 8.70728" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </form>
+    </div>
   </section>
+
+  <footer> 
+    <div class="footer-container">
+      <div class="footer-main">
+        <img src="images/logos/TechfinityLogo.png" alt="">
+        <p>Unit 412 J&t Bldg 3894 Ramon<br>
+           Magsaysay Blvd Sta. Mesa Manila<br>
+           (02) 8404-5627  || 0946 336 0774<br>
+           sales@techfinity.ph</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-overview">
+          <p class="footer-title">Overview</p>
+          <a href="">Biometrics</a>
+          <a href="">Door Access</a>
+          <a href="">CCTV</a>
+        </div>
+        <div class="footer-company">
+          <p class="footer-title">Company</p>
+          <a href="">Home</a>
+          <a href="">About Us</a>
+          <a href="">Services</a>
+        </div>
+        <div class="footer-explore">
+          <p class="footer-title">Explore</p>
+          <a href="">Project Feeds</a>
+          <a href="">Privacy Policy</a>
+          <a href="">Cookies</a>
+        </div>
+        <div class="footer-social">
+          <p class="footer-title">Social Media</p>
+          <div class="footer-social-icons">
+          <a href="https://www.facebook.com/profile.php?id=61551208128036" target="_blank">
+            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.00195312 10.002C0.00311667 14.9214 3.58036 19.1101 8.43895 19.881V12.892H5.90195V10.002H8.44195V7.80204C8.32841 6.75958 8.68447 5.72064 9.41359 4.96698C10.1427 4.21332 11.1693 3.82306 12.215 3.90204C12.9655 3.91417 13.7141 3.98101 14.455 4.10205V6.56104H13.191C12.7558 6.50405 12.3183 6.64777 12.0017 6.95171C11.6851 7.25566 11.5237 7.68693 11.563 8.12404V10.002H14.334L13.891 12.893H11.563V19.881C16.8174 19.0506 20.502 14.2518 19.9475 8.96112C19.3929 3.67041 14.7932 -0.260027 9.48078 0.0172227C4.16831 0.294472 0.0027976 4.68235 0.00195312 10.002Z"/>
+            </svg>
+          </a>
+          <a href="">
+            <svg width="19" height="19" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.00195 18.0409C6.54195 18.0409 6.25195 18.0279 5.29195 17.9859C4.54332 17.9613 3.80439 17.8091 3.10695 17.5359C1.90026 17.0663 0.946094 16.1117 0.476953 14.9049C0.214259 14.2049 0.072571 13.4654 0.0579531 12.7179C0.00195312 11.7599 0.00195312 11.4459 0.00195312 9.00488C0.00195312 6.53788 0.0149531 6.24988 0.0579531 5.29488C0.0728908 4.5484 0.214574 3.80989 0.476953 3.11088C0.945584 1.90241 1.9013 0.947055 3.10995 0.478883C3.8086 0.215085 4.5473 0.0730271 5.29395 0.0588828C6.24895 0.00488281 6.56295 0.00488281 9.00195 0.00488281C11.482 0.00488281 11.767 0.0178828 12.712 0.0588828C13.4605 0.0731494 14.2012 0.215192 14.902 0.478883C16.1103 0.947586 17.0658 1.90276 17.535 3.11088C17.8021 3.82008 17.9445 4.57013 17.956 5.32788C18.012 6.28588 18.012 6.59888 18.012 9.03888C18.012 11.4789 17.998 11.7989 17.956 12.7459C17.9411 13.4941 17.799 14.2343 17.536 14.9349C17.0656 16.1426 16.11 17.0975 14.902 17.5669C14.2022 17.8291 13.4631 17.9707 12.716 17.9859C11.761 18.0409 11.448 18.0409 9.00195 18.0409ZM8.96795 1.58788C6.52195 1.58788 6.26795 1.59988 5.31295 1.64288C4.74294 1.65043 4.17843 1.75562 3.64395 1.95388C2.85471 2.25589 2.23018 2.87787 1.92495 3.66588C1.72517 4.20618 1.61996 4.77686 1.61395 5.35288C1.56095 6.32188 1.56095 6.57588 1.56095 9.00488C1.56095 11.4049 1.56995 11.6959 1.61395 12.6589C1.62291 13.2291 1.72805 13.7937 1.92495 14.3289C2.23063 15.1164 2.85505 15.7379 3.64395 16.0399C4.17807 16.2395 4.7428 16.3447 5.31295 16.3509C6.28095 16.4069 6.53595 16.4069 8.96795 16.4069C11.421 16.4069 11.675 16.3949 12.622 16.3509C13.1924 16.3439 13.7573 16.2387 14.292 16.0399C15.0764 15.7353 15.6969 15.1152 16.002 14.3309C16.2014 13.7901 16.3065 13.2192 16.313 12.6429H16.324C16.367 11.6869 16.367 11.4319 16.367 8.98888C16.367 6.54588 16.356 6.28888 16.313 5.33388C16.304 4.76433 16.1988 4.20039 16.002 3.66588C15.6976 2.88046 15.077 2.25918 14.292 1.95388C13.7574 1.75462 13.1924 1.6494 12.622 1.64288C11.655 1.58788 11.402 1.58788 8.96795 1.58788ZM9.00195 13.6239C7.13194 13.6251 5.44537 12.4996 4.72882 10.7723C4.01226 9.04506 4.40686 7.05621 5.72858 5.73334C7.05031 4.41047 9.03882 4.01415 10.7667 4.72921C12.4946 5.44428 13.6215 7.12987 13.622 8.99988C13.6192 11.5509 11.553 13.6189 9.00195 13.6239ZM9.00195 5.99788C7.3451 5.99788 6.00195 7.34103 6.00195 8.99788C6.00195 10.6547 7.3451 11.9979 9.00195 11.9979C10.6588 11.9979 12.002 10.6547 12.002 8.99788C11.9981 7.34263 10.6572 6.00173 9.00195 5.99788ZM13.802 5.28489C13.2074 5.28268 12.7269 4.79947 12.728 4.20489C12.7291 3.61031 13.2114 3.12889 13.806 3.12889C14.4005 3.12889 14.8828 3.6103 14.884 4.20488C14.8842 4.49174 14.7702 4.76691 14.5672 4.96956C14.3642 5.17222 14.0888 5.28568 13.802 5.28489Z"/>
+            </svg>
+          </a>
+          <a href="">
+            <svg width="22" height="17" viewBox="0 0 22 17" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.995 2.68799C19.8914 2.15208 20.5622 1.30823 20.882 0.313989C20.0397 0.813791 19.118 1.16587 18.157 1.35499C16.8246 -0.0544839 14.7135 -0.397485 13.0034 0.517645C11.2933 1.43277 10.4075 3.37948 10.841 5.26999C7.39062 5.09676 4.17598 3.4669 1.99702 0.785989C0.859855 2.74741 1.44097 5.25477 3.32502 6.51599C2.64373 6.49409 1.97754 6.30963 1.38202 5.97799C1.38202 5.99599 1.38202 6.01399 1.38202 6.03199C1.38241 8.07514 2.82239 9.83507 4.82502 10.24C4.19308 10.4119 3.53022 10.4372 2.88702 10.314C3.45022 12.0613 5.06057 13.2583 6.89602 13.294C5.37585 14.4871 3.49849 15.1342 1.56602 15.131C1.22349 15.1315 0.881226 15.1118 0.541016 15.072C2.50341 16.333 4.78738 17.0023 7.12002 17C10.3653 17.0223 13.484 15.7429 15.7787 13.448C18.0734 11.1531 19.3526 8.03424 19.33 4.78899C19.33 4.60299 19.3257 4.41799 19.317 4.23399C20.1575 3.62659 20.8828 2.87414 21.459 2.01199C20.676 2.35905 19.8455 2.58691 18.995 2.68799Z"/>
+            </svg>
+          </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-line"></div>
+    <div class="footer-trademark">
+      <p>@Lraxious Project 2025</p>
+    </div>
+  </footer>
   <script src="clientscroller.js"></script>
 </body>
 </html>
