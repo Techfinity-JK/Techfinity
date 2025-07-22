@@ -119,8 +119,11 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
 }
-.hero-container-right > img{
-    max-height: 585.6px;
+.hero-container-right {
+
+}
+.hero-container-right img{
+    height: 600px;
     object-fit: fill;
 }
 .hero-text-container{
@@ -223,6 +226,11 @@ nav ul li a:hover {
     font-weight: 600;
 }
 
+/* Benefits */
+.benefits-container{
+    height: 1024px;
+    background-image: url(images/backgrounds/biometricbackground.png);
+}
 
 /* Clients */
 #clients {
