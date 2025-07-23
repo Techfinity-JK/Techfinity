@@ -65,13 +65,44 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-
 .li-list{
     display: flex;
     gap: 40px;
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+.li-list{
+    position: relative;
+}
+
+/* Dropdown styles */
+.our-products {
+  display: none;
+  position: absolute;
+  top: 60px; /* right below parent */
+  background-color: var(--white);
+  list-style: none;
+  padding: 0.5em 0;
+  min-width: 150px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.our-products li a {
+  padding: 0.5em 1em;
+  white-space: nowrap;
+}
+
+.our-products li a:hover {
+  background-color: var(--white)
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .our-products {
+  display: block;
 }
 
 .call-quote-button-container{
@@ -120,11 +151,12 @@ nav ul li a:hover {
     flex-direction: column;
 }
 .hero-container-right {
-
+    display: flex;
 }
 .hero-container-right img{
-    height: 600px;
-    object-fit: fill;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .hero-text-container{
     padding-left: 100px;
@@ -228,8 +260,83 @@ nav ul li a:hover {
 
 /* Benefits */
 .benefits-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 1024px;
     background-image: url(images/backgrounds/biometricbackground.png);
+    transition: background-image 0.4s ease;
+}
+.benefits-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.benefits-image{
+    height: 358px;
+    width: 600px;
+    border-radius: 25px;
+    background-color: var(--white);
+    box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+}
+.benefits-image img{
+    height: 358px;
+    width: 600px;
+    border-radius: 25px;
+    object-fit: cover;
+}
+.benefits-buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+.benefits-buttons button{
+    display: flex;
+    align-items: center;
+    width: max-content;
+    padding: 12px 22px;
+    border-radius: 10px;
+    background-color: var(--white);
+    border-style: solid;
+    border-color: var(--p3);
+    border-width: 2px;
+    color: var(--p3);
+    transition: background-color 0.3s;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.25);
+}
+.benefits-btn:hover{
+    background-color: var(--p5);
+    border-color: var(--white);
+    color: var(--white);
+}
+.benefits-btn.active{
+    background-color: var(--p3);
+    border-color: var(--white);
+    color: var(--white);
+}
+.benefits-btn:active{
+    background-color: var(--p1);
+    border-color: var(--white);
+    color: var(--white);
+}
+.benefits-text{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.benefits-text p{
+    font-size: 24px;
+    color: var(--white);
+    text-shadow: 0px 4px 32px rgba(0, 0, 0, 0.25);
 }
 
 /* Clients */

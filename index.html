@@ -14,7 +14,14 @@
     <ul class="li-list">
       <li><a href="#hero">Home</a></li>
       <li><a href="#clients">About</a></li>
-      <li><a href="#contact">Our Products</a></li>
+      <li class="dropdown">
+        <a href="#ourproducts">Our Products</a>
+        <ul class="our-products">
+          <li><a href="#one">One</a></li>
+          <li><a href="#two">Two</a></li>
+          <li><a href="#three">Three</a></li>
+        </ul>
+      </li>
       <li><a href="#contact">Contact Us</a></li>
     </ul>
     <div class="call-quote-button-container">
@@ -49,8 +56,21 @@
     </div>
   </section>
 
-  <section class="benefits-container">
-
+  <section id="backgroundSection" class="benefits-container">
+    <div class="benefits-card">
+      <div class="benefits-image">
+        <img id="benefitsImage" src="images/benefits/warranty.png" alt="">
+      </div>
+      <div class="benefits-buttons">
+        <button class="benefits-btn active" onclick="changeBenefits(this, 'images/benefits/warranty.png', 'images/backgrounds/biometricbackground.png', 'Up to <strong>3 years warranty</strong> lets you worry about everything else but the device.')">Warranty</button>
+        <button class="benefits-btn" onclick="changeBenefits(this, 'images/benefits/aftersalessupport.png', 'images/backgrounds/aftersalessupportbackground.png', 'After sales support is <strong>always open</strong> for our clients for free.')">Support</button>
+        <button class="benefits-btn" onclick="changeBenefits(this, 'images/benefits/virtualuserorientation.png', 'images/backgrounds/virtualuserorientationbackground.png', 'User Orientation for <strong>“How to use”</strong> the device is <strong>free</strong> after purchase.')">Orientation</button>
+        <button class="benefits-btn" onclick="changeBenefits(this, 'images/benefits/freedelivery.png', 'images/backgrounds/deliverybackground.png', '<strong>Free</strong> delivery for purchases above 10,000php within <strong>Metro Manila.</strong>')">Delivery</button>
+      </div>
+      <div class="benefits-text">
+        <p id="benefitsText">Up to <b>3 years warranty</b> lets you worry about everything else but the device.</p>
+      </div>
+    </div>
   </section>
 
   <section class="clients-container" id="clients">
@@ -173,6 +193,7 @@
       <p>@Lraxious Project 2025</p>
     </div>
   </footer>
+  <script src="benefits.js"></script>
   <script src="clientscroller.js"></script>
 </body>
 </html>
