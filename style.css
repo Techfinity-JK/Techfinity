@@ -15,6 +15,10 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     scroll-behavior: smooth;
@@ -36,6 +40,10 @@ nav {
     align-items: center;
     z-index: 1000;
     box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.1);
+}
+
+section{
+    width: 100%;
 }
 
 .logo {
@@ -288,6 +296,7 @@ nav ul li a:hover {
     transition: background-image 0.4s ease;
 }
 .benefits-card{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -560,6 +569,7 @@ input[type="submit"]:hover {
 }
 
 footer {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -674,14 +684,11 @@ footer {
 
 
 
-body {
-  background-color: #f0f0f0;
-  font-family: Arial, sans-serif;
-  padding: 2em;
-  display: flex;
-  justify-content: center;
+.biometric-cards-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
 /* Grid layout: exactly 3 columns */
 .product-grid {
   display: grid;
@@ -689,6 +696,9 @@ body {
   gap: 20px;
   max-width: 960px; /* 3 cards × 300px + gaps */
   width: 100%;
+}
+.product-grid a{
+  text-decoration: none;
 }
 
 /* Product cards */
@@ -700,9 +710,19 @@ body {
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
   padding: 1em;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+.product-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,1);
+}
+
+.product-img img{
+    width: 200px;
+    height: 200px;
+    object-fit: fill;
 }
 
 @media (max-width: 1000px) {
