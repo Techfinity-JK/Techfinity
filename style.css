@@ -14,6 +14,13 @@
     box-sizing: border-box;
 }
 
+h4{
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -29,7 +36,7 @@ body {
 nav {
     position: fixed;
     top: 0;
-    height: 100px;
+    height: 80px;
     width: 100%;
     background-color: var(--white);
     color: black;
@@ -47,6 +54,9 @@ section{
 }
 
 .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     font-weight: bold;
     font-size: 32px;
@@ -58,7 +68,6 @@ section{
     object-fit: contain;
     
 }
-
 
 nav ul li a {
     height: 100%;
@@ -273,7 +282,7 @@ nav ul li a:hover {
 }
 #hero {
     background-color: var(--white);
-    padding-top: 100px;
+    padding-top: 80px;
     text-align: center;
 }
 .hero-p1{
@@ -408,7 +417,7 @@ nav ul li a:hover {
 
 /* Trusted brands */
 .trusted-brands-container{
-    height: 551px;
+    height: max-content;
     width: 100%;
     background-image: url(images/backgrounds/trusted1a.png);
     background-position: center;
@@ -684,7 +693,9 @@ footer {
 
 
 
-.biometric-cards-container{
+.biometric-cards-container, .door-access-cards-container{
+    padding-top: 200px;
+    padding-bottom: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -700,6 +711,7 @@ footer {
 .product-grid a{
     color: black;
     text-decoration: none;
+    width: max-content;
 }
 
 /* Product cards */
@@ -707,15 +719,18 @@ footer {
   background-color: white;
   border-radius: 8px;
   width: 300px;
-  height: 400px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  padding: 1em;
+  height: max-content;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
+.product-card div:nth-of-type(1), .product-card div:nth-of-type(3){
+ padding: 20px;
+}
+
 .product-card:hover {
   box-shadow: 0 4px 8px rgba(0,0,0,1);
 }
@@ -723,13 +738,13 @@ footer {
 .product-img img{
     width: 200px;
     height: 200px;
-    object-fit: fill;
+    object-fit: contain;
 }
 
 @media (max-width: 1000px) {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
-    max-width: 640x;
+    max-width: 640px;
   }
 }
 
