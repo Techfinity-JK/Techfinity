@@ -300,7 +300,7 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 1024px;
+    height: 640px;
     background-image: url(images/backgrounds/biometricbackground.png);
     transition: background-image 0.4s ease;
 }
@@ -692,9 +692,17 @@ footer {
 @media (min-width: 1201px) { }
 
 
-
+.page-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 256px;
+    padding-top: 80px;
+}
+.biometric-header h1{
+    color: black;
+}
 .biometric-cards-container, .door-access-cards-container{
-    padding-top: 200px;
     padding-bottom: 100px;
     display: flex;
     align-items: center;
