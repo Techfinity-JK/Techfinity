@@ -1,5 +1,6 @@
 :root {
     --white: #F9FBFC;
+    --whiteblue: #D9FFFE;
     --p1: #063C6B;
     --p2: #04549D;
     --p3: #0B928E;
@@ -31,22 +32,54 @@ body {
     scroll-behavior: smooth;
     background-color: var(--white);
 }
+/* pre-nav */
+.pre-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background-color: var(--p2);
+    color: var(--white);
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    align-items: center;
+}
+.pre-nav a{
+    display: flex;
+    color: var(--white);
+    text-decoration: none;
+    color: var(--white);
+    font-size: small;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 10px;
+    align-items: center;
+}
 
 /* Navbar */
 nav {
     position: fixed;
     top: 0;
-    height: 80px;
+    height: max-content;
     width: 100%;
     background-color: var(--white);
     color: black;
-    padding-left: 100px;
-    padding-right: 100px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     z-index: 1000;
     box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.1);
+}
+nav > div:nth-child(2){
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 section{
@@ -181,21 +214,34 @@ nav ul li a:hover {
 .hero-container{
     display: flex;
     flex-direction: row;
+    background-color: var(--white);
+    padding-top: 120px;
+    text-align: center;
 }
 .hero-container-left{
     display: flex;
     flex-direction: column;
+    width: 50%;
 }
 .hero-container-right {
     display: flex;
+    width: 50%;
+    height: 500px;
 }
-.hero-container-right img{
+.hero-img {
+  opacity: 0;
+  transition: opacity 1s ease;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
+}
+.hero-img.show {
+  opacity: 1;
+  transition: opacity 1s ease;
 }
 .hero-text-container{
     padding-left: 100px;
+    padding-right: 50px;
     padding-top: 100px;
     text-align: left;
 }
@@ -280,11 +326,6 @@ nav ul li a:hover {
 .hero-contact-sales-button > p, .hero-product-list-button > p{
     font-size: 16px;
 }
-#hero {
-    background-color: var(--white);
-    padding-top: 80px;
-    text-align: center;
-}
 .hero-p1{
     font-size: 56px;
     line-height: 70px;
@@ -292,6 +333,14 @@ nav ul li a:hover {
 .hero-p2{
     font-size: 56px;
     font-weight: 600;
+}
+.hero-p1, .hero-p2 {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.hero-p1.show, .hero-p2.show {
+  opacity: 1;
+  transition: opacity 1s ease;
 }
 
 /* Benefits */
@@ -392,9 +441,7 @@ nav ul li a:hover {
     width: 100%;
     overflow: hidden;
     box-sizing: border-box;
-    border: 2px solid #ccc;
-    /* optional styling */
-    padding: 10px 0;
+    padding-top: 20px;
 }
 
 /* 2. Flex row containing all images */
@@ -750,6 +797,10 @@ footer {
     box-shadow: 0 4px 8px rgba(0,0,0,0.25);
     border-radius: 10px;
 }
+.core-values-one:hover, .core-values-two:hover, .core-values-three:hover, .core-values-four:hover{
+    background-color: var(--whiteblue);
+    cursor: pointer;
+}
 
 
 
@@ -762,7 +813,7 @@ footer {
     justify-content: center;
     align-items: center;
     height: 256px;
-    padding-top: 80px;
+    padding-top: 120px;
 }
 .biometric-header h1{
     color: black;
