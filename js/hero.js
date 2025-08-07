@@ -11,9 +11,9 @@ const textTwo = [
 ];
 
 const heroImages = [
-  "/images/backgrounds/hero1a.png",
-  "/images/backgrounds/hero1b.png",
-  "/images/backgrounds/hero1c.png",
+  "images/backgrounds/hero1a.png",
+  "images/backgrounds/hero1b.png",
+  "images/backgrounds/hero1c.png",
 ];
 
 const wrapper = document.querySelector('.hero-text-container');
