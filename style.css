@@ -701,11 +701,14 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 100px;
-    padding-left: 100px;
-    padding-right: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
     gap: 10px;
+    text-align: justify;
 }
+
 /* Responsive spacing */
 @media (max-width: 768px) {
   .li-list {

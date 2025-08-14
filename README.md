@@ -5,19 +5,27 @@ Made by Lraxious.
 
 ## 🔗 Live Demo
 
-[Click here to view the website](https://your-username.github.io/your-repo-name)
+[Click here to view the website](https://techfinity-jk.github.io/Techfinity/)
 
 ## 🧠 Features
 
 - Clean landing page with navbar
-- Responsive layout
 - Hero section
 - Client showcase
 - Email subscription form
+- Products List
+- Product Showcase
+- Responsive layout (soon)
 
 ## 📁 Folder Structure
 
 /project-root/
+├── .github
+├── fonts
+├── images
+├── js
+├── products
+├── sections
 ├── index.html
 ├── style.css
 └── README.md
@@ -28,4 +36,4 @@ To run the project locally:
 
 1. Clone the repo
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://techfinity-jk.github.io/Techfinity/
