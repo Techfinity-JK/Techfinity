@@ -179,6 +179,9 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
 }
+.call-quote-button-container a{
+    text-decoration: none;
+}
 .call-quote-button-space{
     margin-right: 20px;
 }
@@ -581,6 +584,7 @@ form {
     margin-top: 24px;
     display: flex;
     flex-direction: row;
+    align-items: center;
     padding: 12px 22px;
     border-radius: 10px;
     background-color: var(--p3);
@@ -594,6 +598,9 @@ form {
 .contact-submit p{
     color: var(--white);
     transition: color 0.3s;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    vertical-align: middle;
 }
 .contact-submit:hover {
     background-color: var(--white);
@@ -610,18 +617,6 @@ form {
 }
 .contact-submit:hover svg{
     stroke: var(--p3);
-}
-
-input[type="submit"] {
-    padding: 0.5em 1em;
-    background-color: #333;
-    color: var(--white);
-    border: none;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #555;
 }
 
 footer {
