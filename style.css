@@ -144,7 +144,7 @@ nav ul li a:hover {
 
 /* Navbar Mobile & Drawer */
 .nav-mobile {
-  display: none;
+  display: hidden;
 }
 .hamburger{
     background-color: transparent;
