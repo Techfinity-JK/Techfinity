@@ -63,13 +63,19 @@
   </nav>
   <nav class="nav-mobile">
     <a href="index.html"><img src="images/logos/TechfinityLogo.png" alt=""></a>
-    <a href="">
+
+    <button class="hamburger" id="hamburger">
       <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M5 17H19M5 12H19M5 7H19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-    </a>
-
+    </button>
   </nav>
+  <div class="mobile-drawer" id="mobile-drawer">
+    <a href="index.html">Home</a>
+    <a href="products/about-us.html">About</a>
+    <a href="products/biometrics.html">Our Products</a>
+    <a href="products/contact-us.html">Contact</a>
+  </div>
   <section class="hero-container" id="hero">
     <div class="hero-container-left">
         <div class="hero-text-container">
@@ -246,5 +252,18 @@
   <script src="js/hero.js"></script>
   <script src="js/benefits.js"></script>
   <script src="js/clientscroller.js"></script>
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const drawer = document.getElementById("mobile-drawer");
+
+    hamburger.addEventListener("click", () => {
+    drawer.classList.toggle("open");
+    });
+    document.addEventListener("click", (e) => {
+      if (!drawer.contains(e.target) && !hamburger.contains(e.target)) {
+        drawer.classList.remove("open");
+      }
+    });
+  </script>
 </body>
 </html>

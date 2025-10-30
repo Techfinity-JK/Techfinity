@@ -81,6 +81,9 @@ nav {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+.mobile-drawer{
+    display: none;
+}
 
 section{
     width: 100%;
@@ -139,10 +142,17 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Navbar Mobile */
+/* Navbar Mobile & Drawer */
 .nav-mobile {
   display: none;
 }
+.hamburger{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
 
 /* Dropdown styles */
 .our-products {
@@ -726,28 +736,6 @@ footer {
 
 
 
-
-/* Small phones */
-@media (max-width: 480px) { }
-
-/* Phones + small tablets */
-@media (min-width: 481px) and (max-width: 767px) { }
-
-/* Tablets (portrait and landscape) */
-@media (min-width: 768px) and (max-width: 1024px) { }
-
-/* Small desktops/laptops */
-@media (min-width: 1025px) and (max-width: 1200px) { }
-
-/* Large desktops */
-@media (min-width: 1201px) { }
-
-
-
-
-
-
-
 /* About Us */
 .about-us-container{
     display: flex;
@@ -755,6 +743,7 @@ footer {
     justify-content: center;
     align-items: center;
     background-color: var(--p3);
+    width: 100%;
 }
 .about-us-container div{
     display: flex;
@@ -868,6 +857,7 @@ footer {
   }
 }
 
+/* Landing Page Mobile */
 @media (max-width: 650px) {
 nav {
     position: static;
@@ -891,6 +881,34 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   padding: 0px 24px;
+}
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: -80vw; /* Hidden off-screen */
+  height: 100vh;
+  width: 80vw;
+  background: #090c10;
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+  transition: right 0.3s ease;
+  z-index: 1001;
+}
+
+.mobile-drawer a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  border-bottom: 1px solid #333;
+}
+
+.mobile-drawer a:hover {
+  background: #333;
+}
+
+.mobile-drawer.open {
+  right: 0;
 }
 .nav-mobile a img{
   height: 75px;
@@ -1079,4 +1097,51 @@ nav {
     justify-content: center;
     height: 200px;
 }
+
+
+/* About Us Mobile */
+@media (max-width: 650px) {
+
+.page-header{
+    height: 125px;
+    padding-top: 0px;
+}
+
+.about-us-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--p3);
+    width: 100%;
+}
+
+.about-us-container div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    color: var(--white);
+    text-align: center;
+}
+
+.core-values-top, .core-values-bot{
+    flex-direction: column;
+    gap: 20px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+/* End of CSS */
 }
