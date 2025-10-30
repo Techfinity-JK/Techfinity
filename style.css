@@ -57,7 +57,7 @@ body {
 }
 
 /* Navbar PC */
-nav {
+.nav-pc {
     position: fixed;
     top: 0;
     height: max-content;
@@ -859,7 +859,7 @@ footer {
 
 /* Landing Page Mobile */
 @media (max-width: 650px) {
-nav {
+.nav-mobile {
     position: static;
     top: 0;
     height: 75px;
