@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Landing Page</title>
-  <link rel="stylesheet" href="../style.css" />
+  <meta name="description" content="Thank you for contacting Techfinity. We will get back to you shortly.">
+  <title>Form Submitted - Techfinity</title>
+  <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav>
+<nav class="nav-pc">
     <div class="pre-nav">
       <a href="mailto:sales@techfinity.ph">
         <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,40 +32,63 @@
       </a>
     </div>
     <div>
-          <a href="../index.html">
-      <div class="logo"><img src="../images/logos/TechfinityLogo.png" alt=""></div>
-    </a>
-    <ul class="li-list">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="about-us.html">About</a></li>
-      <li class="dropdown">
-        <a href="#our-products">Our Products</a>
-        <ul class="our-products">
-          <li><a href="biometrics.html">Biometrics</a></li>
-          <div class="dropdown-line"></div>
-          <li><a href="door-access.html">Door Access</a></li>
-          <div class="dropdown-line"></div>
-          <li><a href="#cctv">CCTV</a></li>
-          <div class="dropdown-line"></div>
-          <li><a href="#coming-soon">Coming Soon</a></li>
+        <a href="index.html">
+            <div class="logo"><img src="images/logos/TechfinityLogo.png" alt="Techfinity Logo"></div>
+        </a>
+        <ul class="li-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products/about-us.html">About</a></li>
+            <li class="dropdown">
+                <a href="#our-products">Our Products</a>
+                <ul class="our-products">
+                    <li><a href="products/biometrics.html">Biometrics</a></li>
+                    <div class="dropdown-line"></div>
+                    <li><a href="products/door-access.html">Door Access</a></li>
+                    <div class="dropdown-line"></div>
+                    <li><a href="#cctv">CCTV</a></li>
+                    <div class="dropdown-line"></div>
+                    <li><a href="#coming-soon">Coming Soon</a></li>
+                </ul>
+            </li>
+            <li><a href="products/contact-us.html">Contact Us</a></li>
         </ul>
-      </li>
-      <li><a href="contact-us.html">Contact Us</a></li>
-    </ul>
-    <div class="call-quote-button-container">
-        <div class="call-quote-button-space"><p>Call <b>0946 336 0774</b> or</p></div>
-        <div class="quote-button"><p>Get a Quotation</p></div>
+        <div class="call-quote-button-container">
+            <div class="call-quote-button-space"><p>Call <b>0946 336 0774</b> or</p></div>
+            <a href="products/contact-us.html">
+                <div class="quote-button"><p>Get a Quotation</p></div>
+            </a>
+        </div>
     </div>
-    </div>
-  </nav>
+</nav>
+
+<!-- Mobile Navigation -->
+<div class="nav-mobile">
+    <a href="index.html">
+        <div class="logo"><img src="images/logos/TechfinityLogo.png" alt="Techfinity Logo"></div>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</div>
+<div class="mobile-drawer" id="mobile-drawer">
+    <a href="index.html">Home</a>
+    <a href="products/about-us.html">About</a>
+    <a href="products/biometrics.html">Biometrics</a>
+    <a href="products/door-access.html">Door Access</a>
+    <a href="products/contact-us.html">Contact Us</a>
+    <a href="products/contact-us.html" class="mobile-quote-btn">Get a Quotation</a>
+</div>
+
 <section class="page-header">
     <h1>Thank you for submitting the form!</h1>
-    
+    <p style="text-align: center; margin-top: 20px;">We will get back to you shortly.</p>
 </section>
-<footer> 
+<footer>
     <div class="footer-container">
       <div class="footer-main">
-        <a href="../index.html"><img src="../images/logos/TechfinityLogo.png" alt=""></a>
+        <a href="index.html"><img src="images/logos/TechfinityLogo.png" alt="Techfinity Logo"></a>
         <p>Unit 422 J&t Bldg 3894 Ramon<br>
            Magsaysay Blvd Sta. Mesa Manila<br>
            (02) 8404-5627  || 0946 336 0774<br>
@@ -73,20 +97,20 @@
       <div class="footer-links">
         <div class="footer-overview">
           <p class="footer-title">Overview</p>
-          <a href="biometrics.html">Biometrics</a>
-          <a href="door-access.html">Door Access</a>
+          <a href="products/biometrics.html">Biometrics</a>
+          <a href="products/door-access.html">Door Access</a>
           <a href="">CCTV</a>
         </div>
         <div class="footer-company">
           <p class="footer-title">Company</p>
-          <a href="../index.html">Home</a>
-          <a href="about-us.html">About Us</a>
+          <a href="index.html">Home</a>
+          <a href="products/about-us.html">About Us</a>
           <a href="">Services</a>
         </div>
         <div class="footer-explore">
           <p class="footer-title">Explore</p>
           <a href="">Project Feeds</a>
-          <a href="">Privacy Policy</a>
+          <a href="sections/privacy-policy.html">Privacy Policy</a>
           <a href="">Cookies</a>
         </div>
         <div class="footer-social">
@@ -113,8 +137,9 @@
     </div>
     <div class="footer-line"></div>
     <div class="footer-trademark">
-      <p>@Lraxious Project 2025</p>
+      <p>&copy; Techfinity 2025</p>
     </div>
 </footer>
+<script src="js/mobile-nav.js"></script>
 </body>
 </html>

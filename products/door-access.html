@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Product List</title>
-  <link rel="stylesheet" href="../style.css?v=2">
+  <meta name="description" content="Browse Techfinity's door access products including magnetic locks, dropbolts, power supplies, and biometric devices for secure entry systems.">
+  <title>Door Access Products - Techfinity</title>
+  <link rel="stylesheet" href="../css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<nav>
+<nav class="nav-pc">
 <div class="pre-nav">
     <a href="mailto:sales@techfinity.ph">
     <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,34 +32,55 @@
     </a>
 </div>
 <div>
-        <a href="../index.html">
-    <div class="logo"><img src="../images/logos/TechfinityLogo.png" alt=""></div>
-</a>
-<ul class="li-list">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="about-us.html">About</a></li>
-    <li class="dropdown">
-    <a href="#our-products">Our Products</a>
-    <ul class="our-products">
-        <li><a href="biometrics.html">Biometrics</a></li>
-        <div class="dropdown-line"></div>
-        <li><a href="door-access.html">Door Access</a></li>
-        <div class="dropdown-line"></div>
-        <li><a href="#cctv">CCTV</a></li>
-        <div class="dropdown-line"></div>
-        <li><a href="#coming-soon">Coming Soon</a></li>
-    </ul>
-    </li>
-    <li><a href="contact-us.html">Contact Us</a></li>
-</ul>
-<div class="call-quote-button-container">
-    <div class="call-quote-button-space"><p>Call <b>0946 336 0774</b> or</p></div>
-    <a href="contact-us.html">
-    <div class="quote-button"><p>Get a Quotation</p></div>
+    <a href="../index.html">
+        <div class="logo"><img src="../images/logos/TechfinityLogo.png" alt="Techfinity Logo"></div>
     </a>
-</div>
+    <ul class="li-list">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about-us.html">About</a></li>
+        <li class="dropdown">
+            <a href="#our-products">Our Products</a>
+            <ul class="our-products">
+                <li><a href="biometrics.html">Biometrics</a></li>
+                <div class="dropdown-line"></div>
+                <li><a href="door-access.html">Door Access</a></li>
+                <div class="dropdown-line"></div>
+                <li><a href="#cctv">CCTV</a></li>
+                <div class="dropdown-line"></div>
+                <li><a href="#coming-soon">Coming Soon</a></li>
+            </ul>
+        </li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+    </ul>
+    <div class="call-quote-button-container">
+        <div class="call-quote-button-space"><p>Call <b>0946 336 0774</b> or</p></div>
+        <a href="contact-us.html">
+            <div class="quote-button"><p>Get a Quotation</p></div>
+        </a>
+    </div>
 </div>
 </nav>
+
+<!-- Mobile Navigation -->
+<div class="nav-mobile">
+    <a href="../index.html">
+        <div class="logo"><img src="../images/logos/TechfinityLogo.png" alt="Techfinity Logo"></div>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</div>
+<div class="mobile-drawer" id="mobile-drawer">
+    <a href="../index.html">Home</a>
+    <a href="about-us.html">About</a>
+    <a href="biometrics.html">Biometrics</a>
+    <a href="door-access.html">Door Access</a>
+    <a href="contact-us.html">Contact Us</a>
+    <a href="contact-us.html" class="mobile-quote-btn">Get a Quotation</a>
+</div>
+
 <section class="page-header">
     <h1>Door Access Products List</h1>
 </section>
@@ -167,7 +189,7 @@
             <div class="product-card">
                 <div><h4>Dropbolt Lock</h4></div>
                 <div class="product-img"><img src="../images/door-access/Drop-bolt-lock-for-fully-framless-door.png" alt=""></div>
-                <div><p>This dropbolt lock is built specifically for fully frameless glass doors with flat glass walls. 
+                <div><p>This dropbolt lock is built specifically for fully frameless glass doors with flat glass walls.
                 </p></div>
             </div>
         </a>
@@ -231,7 +253,7 @@
             <div class="product-card">
                 <div><h4>Wireless Remote</h4></div>
                 <div class="product-img"><img src="../images/door-access/Wireless-remote.png" alt=""></div>
-                <div><p>Skip the wiring with the hassle free connection and unlock the door with the wireless remote. 
+                <div><p>Skip the wiring with the hassle free connection and unlock the door with the wireless remote.
                 </p></div>
             </div>
         </a>
@@ -239,7 +261,7 @@
             <div class="product-card">
                 <div><h4>Door Buzzer</h4></div>
                 <div class="product-img"><img src="../images/door-access/Door-buzzer.png" alt=""></div>
-                <div><p>Skip the wiring with the hassle free connection and unlock the door with the wireless remote. 
+                <div><p>Skip the wiring with the hassle free connection and unlock the door with the wireless remote.
                 </p></div>
             </div>
         </a>
@@ -275,11 +297,12 @@
                 </p></div>
             </div>
         </a>
+    </div>
 </section>
-<footer> 
+<footer>
     <div class="footer-container">
       <div class="footer-main">
-        <a href="../index.html"><img src="../images/logos/TechfinityLogo.png" alt=""></a>
+        <a href="../index.html"><img src="../images/logos/TechfinityLogo.png" alt="Techfinity Logo"></a>
         <p>Unit 422 J&t Bldg 3894 Ramon<br>
            Magsaysay Blvd Sta. Mesa Manila<br>
            (02) 8404-5627  || 0946 336 0774<br>
@@ -301,7 +324,7 @@
         <div class="footer-explore">
           <p class="footer-title">Explore</p>
           <a href="">Project Feeds</a>
-          <a href="">Privacy Policy</a>
+          <a href="../sections/privacy-policy.html">Privacy Policy</a>
           <a href="">Cookies</a>
         </div>
         <div class="footer-social">
@@ -328,8 +351,9 @@
     </div>
     <div class="footer-line"></div>
     <div class="footer-trademark">
-      <p>@Lraxious Project 2025</p>
+      <p>&copy; Techfinity 2025</p>
     </div>
 </footer>
+<script src="../js/mobile-nav.js"></script>
 </body>
 </html>
