@@ -1185,7 +1185,100 @@ footer {
 }
 
 /* ==========================================================================
-   15. Message Button
+   15. Form Sent Page
+   ========================================================================== */
+.form-sent-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: 60px 20px;
+    background-color: var(--bg);
+}
+
+.form-sent-card {
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    padding: 60px 50px;
+    max-width: 560px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.form-sent-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--p2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-sent-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--p1);
+}
+
+.form-sent-text {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+}
+
+.form-sent-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.form-sent-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    background-color: var(--bg);
+    border-radius: 10px;
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+}
+
+.form-sent-detail-item svg {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+}
+
+.form-sent-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 14px 40px;
+    background-color: var(--p2);
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    transition: all var(--transition);
+}
+
+.form-sent-btn:hover {
+    background-color: var(--p1);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* ==========================================================================
+   16. Message Button
    ========================================================================== */
 .message-btn {
     position: fixed;

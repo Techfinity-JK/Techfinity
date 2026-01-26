@@ -61,29 +61,51 @@
     </div>
 </nav>
 
-<!-- Mobile Navigation -->
-<div class="nav-mobile">
-    <a href="index.html">
-        <div class="logo"><img src="images/logos/TechfinityLogo.png" alt="Techfinity Logo"></div>
-    </a>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
+<nav class="nav-mobile">
+    <a href="index.html"><img src="images/logos/TechfinityLogo.png" alt="Techfinity Logo"></a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 17H19M5 12H19M5 7H19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
     </button>
-</div>
+</nav>
+
 <div class="mobile-drawer" id="mobile-drawer">
     <a href="index.html">Home</a>
     <a href="products/about-us.html">About</a>
-    <a href="products/biometrics.html">Biometrics</a>
-    <a href="products/door-access.html">Door Access</a>
-    <a href="products/contact-us.html">Contact Us</a>
-    <a href="products/contact-us.html" class="mobile-quote-btn">Get a Quotation</a>
+    <a href="products/biometrics.html">Our Products</a>
+    <a href="products/contact-us.html">Contact</a>
 </div>
 
 <section class="page-header">
-    <h1>Thank you for submitting the form!</h1>
-    <p style="text-align: center; margin-top: 20px;">We will get back to you shortly.</p>
+    <h1>Contact Us</h1>
+</section>
+
+<section class="form-sent-container">
+    <div class="form-sent-card">
+        <div class="form-sent-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <h2 class="form-sent-title">Message Sent Successfully</h2>
+        <p class="form-sent-text">Thank you for reaching out to Techfinity. Our team has received your inquiry and will get back to you within 1-2 business days.</p>
+        <div class="form-sent-details">
+            <div class="form-sent-detail-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.50246 4.25722C9.19873 3.4979 8.46332 3 7.64551 3H4.89474C3.8483 3 3 3.8481 3 4.89453C3 13.7892 10.2108 21 19.1055 21C20.1519 21 21 20.1516 21 19.1052L21.0005 16.354C21.0005 15.5361 20.5027 14.8009 19.7434 14.4971L17.1069 13.4429C16.4249 13.1701 15.6483 13.2929 15.0839 13.7632L14.4035 14.3307C13.6089 14.9929 12.4396 14.9402 11.7082 14.2088L9.79222 12.2911C9.06079 11.5596 9.00673 10.3913 9.66895 9.59668L10.2363 8.9163C10.7066 8.35195 10.8305 7.57516 10.5577 6.89309L9.50246 4.25722Z" stroke="var(--p2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Need urgent help? Call <b>Techfinity - 09616893134</b></span>
+            </div>
+            <div class="form-sent-detail-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 7L10.1649 12.7154C10.8261 13.1783 11.1567 13.4097 11.5163 13.4993C11.8339 13.5785 12.1661 13.5785 12.4837 13.4993C12.8433 13.4097 13.1739 13.1783 13.8351 12.7154L22 7M6.8 20H17.2C18.8802 20 19.7202 20 20.362 19.673C20.9265 19.3854 21.3854 18.9265 21.673 18.362C22 17.7202 22 16.8802 22 15.2V8.8C22 7.11984 22 6.27976 21.673 5.63803C21.3854 5.07354 20.9265 4.6146 20.362 4.32698C19.7202 4 18.8802 4 17.2 4H6.8C5.11984 4 4.27976 4 3.63803 4.32698C3.07354 4.6146 2.6146 5.07354 2.32698 5.63803C2 6.27976 2 7.11984 2 8.8V15.2C2 16.8802 2 17.7202 2.32698 18.362C2.6146 18.9265 3.07354 19.3854 3.63803 19.673C4.27976 20 5.11984 20 6.8 20Z" stroke="var(--p2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Or email us at <b>customersupport@techfinity.ph</b></span>
+            </div>
+        </div>
+        <a href="index.html" class="form-sent-btn">Back to Home</a>
+    </div>
 </section>
 <footer>
     <div class="footer-container">
@@ -140,6 +162,13 @@
       <p>&copy; Techfinity 2025</p>
     </div>
 </footer>
+<!-- Message Button -->
+<a href="https://www.facebook.com/profile.php?id=61551208128036" target="_blank" class="message-btn" aria-label="Message us on Facebook">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C6.477 2 2 6.145 2 11.243C2 14.054 3.358 16.555 5.5 18.188V22L9.172 19.89C10.088 20.131 11.041 20.257 12 20.257C17.523 20.257 22 16.112 22 11.014C22 5.917 17.523 2 12 2ZM13 14L10 10.5L4.5 14L10.5 7.5L13.5 11L19 7.5L13 14Z" fill="white"/>
+    </svg>
+</a>
+
 <script src="js/mobile-nav.js"></script>
 </body>
 </html>
