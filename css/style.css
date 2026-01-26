@@ -285,7 +285,7 @@ nav ul li a:hover {
     transition: opacity 1s ease;
     width: 100%;
     height: 100%;
-    object-fit: fill;
+    object-fit: cover;
 }
 
 .hero-img.show {
@@ -295,6 +295,7 @@ nav ul li a:hover {
 .hero-text-container {
     padding: 100px 50px 0 100px;
     text-align: left;
+    min-height: 350px;
 }
 
 .hero-button-container {
@@ -378,13 +379,21 @@ nav ul li a:hover {
 
 .hero-p1,
 .hero-p2 {
-    opacity: 0;
-    transition: opacity 1s ease;
+    opacity: 1;
+    min-height: 1.2em;
 }
 
-.hero-p1.show,
-.hero-p2.show {
-    opacity: 1;
+.hero-p1.typing::after,
+.hero-p2.typing::after {
+    content: '|';
+    animation: blink 0.7s infinite;
+    margin-left: 2px;
+    font-weight: 400;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
 }
 
 /* ==========================================================================
@@ -1224,6 +1233,7 @@ footer {
 
     .hero-text-container {
         padding: 60px 40px 0;
+        min-height: 180px;
     }
 
     .hero-button-container {
@@ -1342,6 +1352,7 @@ footer {
     .hero-text-container {
         padding: 20px;
         text-align: center;
+        min-height: 140px;
     }
 
     .hero-button-container {

@@ -16,44 +16,73 @@ const heroImages = [
   "images/backgrounds/hero1c.png",
 ];
 
-const wrapper = document.querySelector('.hero-text-container');
+const heroP1 = document.querySelector('.hero-p1');
+const heroP2 = document.querySelector('.hero-p2');
 const heroImg = document.querySelector('.hero-img');
 let index = 0;
 
-function showNextText() {
-  // Set text content
-  wrapper.innerHTML = `
-    <p class="hero-p1">${textOne[index]}</p>
-    <p class="hero-p2">${textTwo[index]}</p>
-  `;
+const typingSpeed = 40;
+const deleteSpeed = 25;
+const pauseBeforeDelete = 2500;
+const pauseBeforeNext = 500;
 
-  const currentOne = wrapper.querySelector('.hero-p1');
-  const currentTwo = wrapper.querySelector('.hero-p2');
-
-  // Reset image fade first, THEN update src
-  heroImg.classList.remove('show');
-
-  // Wait until fade-out completes before swapping image
-  setTimeout(() => {
-    heroImg.src = heroImages[index];
-  }, 20); // delay helps avoid flicker
-
-  // Fade in
-  setTimeout(() => {
-    currentOne.classList.add('show');
-    currentTwo.classList.add('show');
-    heroImg.classList.add('show');
-  }, 10);
-
-  // Fade out
-  setTimeout(() => {
-    currentOne.classList.remove('show');
-    currentTwo.classList.remove('show');
-    heroImg.classList.remove('show');
-
-    index = (index + 1) % textOne.length;
-    setTimeout(showNextText, 1000);
-  }, 3000);
+async function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-showNextText();
+async function typeText(element, text) {
+  element.textContent = '';
+  for (let i = 0; i < text.length; i++) {
+    element.textContent += text[i];
+    await sleep(typingSpeed);
+  }
+}
+
+async function deleteText(element) {
+  const text = element.textContent;
+  for (let i = text.length; i >= 0; i--) {
+    element.textContent = text.substring(0, i);
+    await sleep(deleteSpeed);
+  }
+}
+
+async function animateHero() {
+  while (true) {
+    // Update image with fade
+    heroImg.classList.remove('show');
+    await sleep(300);
+    heroImg.src = heroImages[index];
+    heroImg.classList.add('show');
+
+    // Type the first line
+    heroP1.classList.add('typing');
+    await typeText(heroP1, textOne[index]);
+    heroP1.classList.remove('typing');
+
+    // Type the second line (product name)
+    heroP2.classList.add('typing');
+    await typeText(heroP2, textTwo[index]);
+    heroP2.classList.remove('typing');
+
+    // Pause to let user read
+    await sleep(pauseBeforeDelete);
+
+    // Delete the second line first
+    heroP2.classList.add('typing');
+    await deleteText(heroP2);
+    heroP2.classList.remove('typing');
+
+    // Delete the first line
+    heroP1.classList.add('typing');
+    await deleteText(heroP1);
+    heroP1.classList.remove('typing');
+
+    // Move to next index
+    index = (index + 1) % textOne.length;
+
+    await sleep(pauseBeforeNext);
+  }
+}
+
+// Start animation
+animateHero();
