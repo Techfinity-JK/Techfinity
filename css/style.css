@@ -1364,9 +1364,12 @@ footer {
         display: none;
     }
 
-    /* Hide message button on mobile */
+    /* Message button on mobile */
     .message-btn {
-        display: none;
+        bottom: 20px;
+        right: 20px;
+        width: 48px;
+        height: 48px;
     }
 
     .nav-mobile {
