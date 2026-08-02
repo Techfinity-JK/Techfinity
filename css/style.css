@@ -1018,7 +1018,8 @@ footer {
 }
 
 .biometric-cards-container,
-.door-access-cards-container {
+.door-access-cards-container,
+.cctv-cards-container {
     padding: 0 20px 100px;
     display: flex;
     align-items: center;
@@ -1136,6 +1137,16 @@ footer {
 .brand-generic {
     background-color: #F5F5F5;
     color: #616161;
+}
+
+.brand-hikvision {
+    background-color: #FDE8E8;
+    color: #C62828;
+}
+
+.brand-dahua {
+    background-color: #FFF3E0;
+    color: #E65100;
 }
 
 .product-features {
