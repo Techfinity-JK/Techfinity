@@ -21,6 +21,7 @@
     --radius-md: 10px;
     --radius-lg: 25px;
     --transition: 0.3s ease;
+    --demochipblue: #1447E6;
 }
 
 /* ==========================================================================
@@ -1735,4 +1736,255 @@ footer {
     .contacts-card-p {
         font-size: 17px;
     }
+}
+
+
+/* ==========================================================================
+   20. Product Card QRs Demo
+   ========================================================================== */
+
+.demo-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    padding-top: 160px;
+    padding-bottom: 40px;
+    max-width: 1000px;
+}
+.demo-sub {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    max-width: 1000px;
+    margin-bottom: 24px;
+}
+
+.demo-sub :nth-child(1){
+    font-size: 18px;
+}
+
+.demo-sub :nth-child(2){
+    font-size: 12px;
+}
+
+.demo-hero h1 {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+.demo-hero p {
+    color: rgb(98 116 142);
+    max-width: 600px;
+    text-align: center;
+}
+
+.qr-chip-1 {
+    background-color: rgb(219 234 254);
+    padding: 6px 16px;
+    opacity: 100%;
+    border-radius: calc(infinity * 1px);
+}
+
+.qr-chip-1 p{
+    opacity: 100%;
+    color: var(--demochipblue);
+}
+
+.supported-products {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.supported-products p {
+    text-align: start;
+}
+
+.productsQR-section{
+    display: flex;
+    max-width: 1000px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.productQR-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.productQR-top{
+    width: 100%;
+    border-radius: 32px 32px 0 0;
+    background-color: #0052CC;
+    padding: 24px 32px;
+    box-shadow: 0px 0px 2px 1px #888888;
+    z-index: 10;
+}
+
+.productQR-text{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    color: white;
+}
+
+.productQR-text :nth-child(1){
+    font-size: 36px;
+}
+
+.productQR-text :nth-child(2){
+    font-size: 14px;
+    color: rgb(144 161 185);
+    font-weight: 800;
+}
+
+.productQR-bottom {
+  width: 100%;
+  padding: 24px;
+  background-color: #EFF4FF;
+  border-radius: 0 0 32px 32px;
+  box-shadow: 0px 0px 2px 1px #888888;
+  z-index: 9;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal horizontal columns */
+  gap: 8px; /* Small gap between items */
+  align-items: center; /* Vertically aligns images if needed */
+}
+
+
+/* Ensure the wrapper div centers its image */
+.productQR-bottom div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Fix image scaling & aspect ratio */
+.productQR-bottom div img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain; /* Preserves QR code ratio without distortion */
+    display: block;
+}
+
+.productQR-bottom-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    gap: 16px;
+    transition: all 0.1s ease-in-out;
+}
+
+.productQR-bottom-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+    transition: all 0.1s ease-in-out;
+
+}
+
+.productQR-bottom-card :nth-child(2){
+    font-size: 12px;
+    color: rgb(98 116 142);
+}
+
+.emoji-bg{
+    height: 32px;
+    width: 32px;
+    border-radius: calc(infinity * 1px);
+    background-color: rgb(139, 150, 165);
+}
+
+.qr-div{
+    max-width: 116px;
+    max-height: 116px;
+    border-radius: 16px;
+    box-shadow: 0px 0px 2px 1px #888888;
+    transition: all 0.1s ease-in-out;
+}
+
+.qr-div:hover {
+    transform: translateY(-2px);
+    border-radius: 16px;
+    box-shadow: 0px 0px 2px 1px #888888;
+    transition: all 0.1s ease-in-out;
+}
+
+
+.open-button{
+    padding: 6px 12px;
+    background-color: #0052CC;
+    box-shadow: none;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+
+.open-button:hover{
+    background-color: #447dd1;
+}
+
+
+.demo-contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 48px 0px;
+}
+
+.demo-contact-text :nth-child(1){
+    font-size: 14px;
+}
+
+.demo-contact-text :nth-child(2){
+    font-size: 16px;
+}
+
+.demo-contact-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.demo-contact-a{
+    background-color: #0052CC;
+    color: white;
+}
+
+.demo-contact-a:hover{
+    background-color: #01337c;
+}
+.demo-contact-b{
+    background-color: white;
+    border: 1px solid #dadada;
+}
+.demo-contact-a,.demo-contact-b{
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    padding: 10px 24px;
 }
