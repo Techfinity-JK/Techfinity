@@ -6,7 +6,7 @@
   <title>Contact Us - Techfinity</title>
   <meta name="description" content="Contact Techfinity Security Device Trading for inquiries about Biometrics, CCTV, and Access Control Systems. Get a free quotation today.">
   <link rel="stylesheet" href="../css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="../js/email.js" defer></script>
   <script src="../js/mobile-nav.js" defer></script>
@@ -81,7 +81,7 @@
   </div>
 
   <section class="demo-hero">
-    <div class="qr-chip-1">
+    <div class="header-chip">
       <p>Video Tutorial Hub</p>
     </div>
     <h1>Product Support Center</h1>
@@ -248,7 +248,75 @@
   </section>
 
   <section class="demo-faq">
+    <div class="faq-container">
+      <div class="demo-text">
+        <h2>Frequently Asked Questions</h2>
+        <p class="faq-p-main">Common issues and answers for all device models.</p>
+      </div>
+      <div class="faq-button-container">
 
+        <div class="faq-button-wrapper">
+          <button id="faqBtn1" class="faq-button">
+            <span>How do I reset my device to factory settings?</span>
+            <span class="plus-icon">+</span>
+          </button>
+          <div id="infoDiv1" class="hidden">
+            <p class="faq-p">
+              Navigate to the device Settings menu → System → Factory Reset. You will be prompted for the admin PIN before proceeding. Scan the relevant QR code above for a step-by-step video guide.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-button-wrapper">
+          <button id="faqBtn2" class="faq-button">
+            <span>Why is my fingerprint not being recognized?</span>
+            <span class="plus-icon">+</span>
+          </button>
+          <div id="infoDiv2" class="hidden">
+            <p class="faq-p">
+              Ensure the sensor is clean and dry. Re-enroll the fingerprint under optimal conditions — use the Enrollment tutorial QR above. Poor lighting or excess moisture are the most common causes of recognition failure.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-button-wrapper">
+          <button id="faqBtn3" class="faq-button">
+            <span>How many users can be enrolled on the device?</span>
+            <span class="plus-icon">+</span>
+          </button>
+          <div id="infoDiv3" class="hidden">
+            <p class="faq-p">
+              The M06 supports up to 3,000 fingerprints, the X6 supports up to 10,000 face templates, and the LX50 supports up to 5,000 multi-biometric records. Contact support for enterprise capacity options.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-button-wrapper">
+          <button id="faqBtn4" class="faq-button">
+            <span>Can I integrate the device with third-party software?</span>
+            <span class="plus-icon">+</span>
+          </button>
+          <div id="infoDiv4" class="hidden">
+            <p class="faq-p">
+              Yes. All devices support Wiegand output and TCP/IP connectivity. SDK documentation and integration guides are available upon request from our technical support team.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-button-wrapper-no-border">
+          <button id="faqBtn5" class="faq-button">
+            <span>What do I do if the device display shows an error code?</span>
+            <span class="plus-icon">+</span>
+          </button>
+          <div id="infoDiv5" class="hidden">
+            <p class="faq-p">
+              Scan the Troubleshoot QR code for your specific device model above. The linked video walks through all common error codes. For unlisted codes, contact our support line with your device serial number.
+            </p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
   </section>
 
   <section class="demo-contact">
@@ -324,5 +392,60 @@
       <p>&copy; Techfinity 2025</p>
     </div>
   </footer>
+
+<script>
+    const button1 = document.getElementById('faqBtn1');
+    const button2 = document.getElementById('faqBtn2');
+    const button3 = document.getElementById('faqBtn3');
+    const button4 = document.getElementById('faqBtn4');
+    const button5 = document.getElementById('faqBtn5'); 
+    const infoDiv1 = document.getElementById('infoDiv1');
+    const infoDiv2 = document.getElementById('infoDiv2');
+    const infoDiv3 = document.getElementById('infoDiv3');
+    const infoDiv4 = document.getElementById('infoDiv4');
+    const infoDiv5 = document.getElementById('infoDiv5');
+
+    button1.addEventListener('click', () => {
+      infoDiv2.classList.add('hidden');
+      infoDiv3.classList.add('hidden');
+      infoDiv4.classList.add('hidden');
+      infoDiv5.classList.add('hidden');
+      infoDiv1.classList.toggle('hidden');
+      
+    });
+
+    button2.addEventListener('click', () => {
+      infoDiv1.classList.add('hidden');
+      infoDiv3.classList.add('hidden');
+      infoDiv4.classList.add('hidden');
+      infoDiv5.classList.add('hidden');
+      infoDiv2.classList.toggle('hidden');
+    });
+
+    button3.addEventListener('click', () => {
+      infoDiv1.classList.add('hidden');
+      infoDiv2.classList.add('hidden');
+      infoDiv4.classList.add('hidden');
+      infoDiv5.classList.add('hidden');
+      infoDiv3.classList.toggle('hidden');
+    });
+
+    button4.addEventListener('click', () => {
+      infoDiv1.classList.add('hidden');
+      infoDiv2.classList.add('hidden');
+      infoDiv3.classList.add('hidden');
+      infoDiv5.classList.add('hidden');
+      infoDiv4.classList.toggle('hidden');
+    });
+
+    button5.addEventListener('click', () => {
+      infoDiv1.classList.add('hidden');
+      infoDiv2.classList.add('hidden');
+      infoDiv3.classList.add('hidden');
+      infoDiv4.classList.add('hidden');
+      infoDiv5.classList.toggle('hidden');
+    });
+
+  </script>
 </body>
 </html>
