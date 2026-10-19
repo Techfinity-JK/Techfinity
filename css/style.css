@@ -9,11 +9,11 @@
 :root {
     --white: #F9FBFC;
     --whiteblue: #D9FFFE;
-    --p1: #063C6B;
-    --p2: #04549D;
-    --p3: #0B928E;
-    --p4: #17A97C;
-    --p5: #51CA6D;
+    --p1: #056fc2;
+    --p2: #056fc2;
+    --p3: #056fc2;
+    --p4: #056fc2;
+    --p5: #056fc2;
     --shadow-sm: 0px 2px 8px rgba(0, 0, 0, 0.1);
     --shadow-md: 0px 4px 16px rgba(0, 0, 0, 0.15);
     --shadow-lg: 0px 4px 32px rgba(0, 0, 0, 0.25);
@@ -21,7 +21,8 @@
     --radius-md: 10px;
     --radius-lg: 25px;
     --transition: 0.3s ease;
-    --demochipblue: #1447E6;
+    --demochipblue: #056fc2;
+    --tblue: #056fc2;
 }
 
 /* ==========================================================================
@@ -65,7 +66,7 @@ section {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    background-color: var(--p2);
+    background-color: var(--tblue);
     color: var(--white);
     width: 100%;
     padding: 10px 100px;
@@ -220,7 +221,7 @@ nav ul li a:hover {
     align-items: center;
     padding: 7.5px 15px;
     border-radius: 100px;
-    background-color: var(--p1);
+    background-color: var(--tblue);
     transition: background-color var(--transition);
     cursor: pointer;
 }
@@ -267,6 +268,7 @@ nav ul li a:hover {
     background-color: var(--white);
     padding-top: 120px;
     text-align: center;
+    height: contain;
 }
 
 .hero-container-left {
@@ -281,11 +283,115 @@ nav ul li a:hover {
     height: 500px;
 }
 
+
+/* 
+   Image Grid Styles
+   Ensures a 4x2 grid of square images
+*/
+
+.hero-video {
+    display: flex;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    object-fit: cover;
+    flex: 1;
+}
+
+.hero-video img{
+    object-fit: contain;
+}
+
+.image-grid {
+    opacity: 50%;
+  display: grid;
+  /* Forces 4 equal columns regardless of screen size */
+  grid-template-columns: repeat(4, 1fr);
+  /* Creates 2 rows */
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.grid-item {
+  aspect-ratio: 1 / 1; /* Ensures each box is a perfect square */
+  background-color: #f0f0f0; /* Fallback background */
+  overflow: hidden;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images fill the square without distortion */
+}
+
+/* 
+   Image Grid End
+*/
+.hero-container-o, .about-us-container-o {
+    display:flex;
+    flex-direction: row;
+    margin: 64px 64px;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-content, .about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  text-align: start;
+  color: #000000;
+  padding: 1rem;
+  max-width: 50%;
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: clamp(2rem, 5vw, 3rem); /* Fluid typography scaling with screen size */
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 32px;
+  background: #000000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.highlight {
+  background: var(--p3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.highlight-2 {
+    color: var(--p3);
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 2.5vw, 16px);
+}
+
+
+.hero-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  width: fit-content;
+}
+
 .hero-img {
     opacity: 0;
     transition: opacity 1s ease;
-    width: 100%;
-    height: 100%;
+    max-height: 50%;
     object-fit: cover;
 }
 
@@ -502,7 +608,7 @@ nav ul li a:hover {
 }
 
 .clients-container {
-    margin: 50px 0 70px;
+    margin-bottom: 50px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -532,6 +638,148 @@ nav ul li a:hover {
     max-height: 100px;
     margin-right: 20px;
     flex-shrink: 0;
+}
+
+.why-choose-us-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 64px;
+    padding-right: 64px;
+    background-color: #ffffff;
+}
+
+.why-choose-us {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    justify-content: center;
+    align-items: end;
+    color: black;
+    gap: 3.5rem;
+    margin-bottom: 64px;
+}
+
+.why-choose-us-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    gap: none;
+}
+
+.why-choose-us-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    max-width: 80rem;
+    margin-inline: auto;
+    gap: 1.5rem;
+}
+
+.why-choose-us-cards-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 1.5rem;
+    padding: 2rem;
+    border: 1px solid #839bbe;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-choose-us-cards-div:hover {
+    transform: translateY(-4px); /* moves the card up slightly */
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); /* equivalent to shadow-xl */
+}
+
+.why-choose-us :nth-child(1) > span{
+    font-size: 12px;
+    color: #0052CC;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.why-choose-us :nth-child(1) > p{
+    font-size: 48px;
+    font-weight: 800;
+    color: black;
+    max-width: 35rem;
+    line-height: 1.0;
+}
+
+.why-choose-us-warranty {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 48px;
+    padding: 24px 32px;
+    border-radius: 0.5rem;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+
+}
+
+.why-choose-us-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.why-choose-us-warranty-icon{
+    color: white;
+    background-color: #0052CC;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 5rem;
+}
+
+.why-choose-us-warranty :nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 0.5rem;
+}
+
+.why-choose-us-warranty-text :nth-child(1){
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+.why-choose-us-warranty-text :nth-child(2){
+    color:#6a7282;
+}
+
+.why-choose-us-warranty a{
+    display: flex;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 12px 28px;
+    color: white;
+    background-color: #0052CC;
+    font-weight: 600;
+    border-radius: 0.25rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.5 ease-in-out;
+}
+
+.why-choose-us-warranty a:hover{
+    background-color: #1d77ff;
+    transition: all 0.5 ease-in-out;
 }
 
 .trusted-by-organizations{
@@ -591,7 +839,7 @@ nav ul li a:hover {
 .trusted-brands-container {
     width: 100%;
     background-color: white;
-    padding: 96px 0px;
+    padding: 0px 0px;
     display: flex;
     justify-content: center;
 }
@@ -719,7 +967,7 @@ nav ul li a:hover {
     background-color: #f8fafc;
     border: 1px solid #e2e8f0;
     border-radius: 0.5rem;
-    margin-top: 48px;
+    margin: 48px 0px;
     padding: 32px;
     width: 100%;
     justify-content: space-between;
@@ -740,7 +988,7 @@ nav ul li a:hover {
     font-size: 14px;
 }
 
-.trusted-brands-end a{
+.trusted-brands-end a, .hero-buttons a{
     display: flex;
     font-size: 14px;
     text-decoration: none;
@@ -753,9 +1001,10 @@ nav ul li a:hover {
     justify-content: center;
     text-align: center;
     transition: all 0.5 ease-in-out;
+
 }
 
-.trusted-brands-end-a:hover{
+.trusted-brands-end-a:hover, .hero-buttons a:hover{
     background-color: #1d77ff;
     transition: all 0.5 ease-in-out;
 }
@@ -1089,7 +1338,7 @@ footer {
 }
 
 .core-values-container {
-    padding: 100px 20px;
+
 }
 
 .core-values-title {
@@ -1198,11 +1447,19 @@ footer {
    ========================================================================== */
 .page-header {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
     min-height: 200px;
     padding-top: 160px;
     padding-bottom: 40px;
+}
+
+.main-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
 }
 
 .biometric-header h1 {
@@ -1504,6 +1761,112 @@ footer {
     transform: scale(1.1);
     box-shadow: var(--shadow-lg);
 }
+
+/* ==========================================================================
+   X. About Us Page
+   ========================================================================== */
+.about-us-header {
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    padding-top: 160px;
+    padding-bottom: 40px;
+}
+
+.about-img{
+    height: 100%;
+    width: 50%;
+    padding-right: 50px;
+}
+
+.about-img img{
+    max-height: 400px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.who-we-are-btn {
+    text-wrap: nowrap;  
+}
+
+.about-us-stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f8fafc;
+    border-top: #c9c9c9 1px solid;
+    border-bottom: #c9c9c9 1px solid;
+}
+
+.about-us-stats > div {
+    padding: 20px 64px;
+    border-right: #c9c9c9 1px solid;
+}
+
+.about-us-stats > div:last-child {
+    border-right: none;
+}
+
+.about-us-stats p:nth-child(1), .about-us-stats p:nth-child(2){
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--p3);
+}
+.about-us-stats p:nth-child(3){
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--p3);
+}
+
+.stats-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.stats-item-icon-container {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--p3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.stats-item-icon-container svg{
+    color: white;
+}
+
+.values-container-o{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    justify-content: center;
+    align-items: end;
+    color: black;
+    background-color: white;
+    gap: 3.5rem;
+    padding: 64px 64px;
+}
+
+.values-container-o-h1{
+    font-size: 48px;
+    font-weight: 800;
+    color: black;
+    max-width: 35rem;
+    line-height: 1.0;
+    margin-bottom: 32px;
+}
+
 
 /* ==========================================================================
    17. Tablet Responsive (max-width: 1024px)
@@ -1860,10 +2223,6 @@ footer {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
-    }
-
-    .core-values-container {
-        padding: 60px 15px;
     }
 
     .core-values-title {
@@ -2318,4 +2677,8 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.hidden {
+    display: none;
 }
